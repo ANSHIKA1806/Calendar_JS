@@ -1,110 +1,106 @@
-  
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
-}
+            box-sizing: border-box;
+        }
 
-html {
-  font-size: 62.5%;
-}
+        ul {
+            list-style-type: none;
+        }
 
-.container {
-  width: 100%;
-  height: 100vh;
-  background-color: #12121f;
-  color: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        body {
+            font-family: "Lato", sans-serif;
+        }
 
-.calendar {
-  width: 45rem;
-  height: 52rem;
-  background-color: #222227;
-  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
-}
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
 
-.month {
-  width: 100%;
-  height: 12rem;
-  background-color: #167e56;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-  text-align: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-}
+        .wrapper {
+            background-color: #dfe6e9;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
 
-.month i {
-  font-size: 2.5rem;
-  cursor: pointer;
-}
+        .calendar {
+            margin: auto;
+            width: 600px;
+            background-color: #fff;
+            box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.2);
+       
+        }
 
-.month h1 {
-  font-size: 3rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  margin-bottom: 1rem;
-}
+        .month {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 40px 30px;
+            text-align: center;
+            background-color: #2ecc71;
+            color: #fff;
+        }
 
-.month p {
-  font-size: 1.6rem;
-}
+        .weekdays {
+            background-color: #27ae60;
+            color: #fff;
+            padding: 7px 0;
+            display: flex;
+        }
 
-.weekdays {
-  width: 100%;
-  height: 5rem;
-  padding: 0 0.4rem;
-  display: flex;
-  align-items: center;
-}
+        .days {
+            font-weight: 300;
+            padding: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-.weekdays div {
-  font-size: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 0.1rem;
-  width: calc(44.2rem / 7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-}
+        .weekdays div,
+        .days div {
+            text-align: center;
+            width: 14.28%;
+        }
 
-.days {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0.2rem;
-}
+        .days div {
+            padding: 10px 0;
+            margin-bottom: 10px;
+            transition: all 0.4s;
+        }
 
-.days div {
-  font-size: 1.4rem;
-  margin: 0.3rem;
-  width: calc(40.2rem / 7);
-  height: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-  transition: background-color 0.2s;
-}
+        .prev_date {
+            color: #999;
+        }
 
-.days div:hover:not(.today) {
-  background-color: #262626;
-  border: 0.2rem solid #777;
-  cursor: pointer;
-}
+        .today {
+            background-color: #27ae60;
+            color: #fff;
+        }
 
-.prev-date,
-.next-date {
-  opacity: 0.5;
-}
+        .days div:hover {
+            cursor: pointer;
+            background-color: #dfe6e9
+        }
 
-.today {
-  background-color: #167e56;
-}
+        .prev,
+        .next {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 23px;
+            background-color: rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .prev:hover,
+        .next:hover {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        #month {
+            font-size: 30px;
+            font-weight: 500;
+        }
